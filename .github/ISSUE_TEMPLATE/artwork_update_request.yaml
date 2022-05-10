@@ -1,0 +1,34 @@
+name: Create Artwork Showcase Update Request
+description: Here is where you can update a acmCSUF create's artwork showcase information.
+title: '[ARTWORK_AUTOMATION]'
+labels: ['automation:ARTWORK']
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### About this form
+        When you submit this form, an automation is triggered that creates a PR updating the user data on <https://acmcsuf.com/paths/create>.
+        This form only triggers a workflow if you are an authorized contributor.
+        ![banner](https://raw.githubusercontent.com/EthanThatOneKid/acmcsuf.com/main/static/assets/about-illustration.svg)
+        **Note**: Above banner not included in your published bug report.
+
+  - type: input
+    id: creator_name
+    attributes:
+      label: '>>Creator Name<<'
+      description: Please enter the name of the creator of this art as seen on https://acmcsuf.com/paths/create.
+    validations:
+      required: true
+
+  - type: textarea
+    id: creator_image
+    attributes:
+      label: '>>Overwrite Creator Picture<<'
+      description: |
+        If an image is detected inside of this textarea, it will be used to update the creator's image on the website.
+      placeholder: You can attach images by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: false
+
+
