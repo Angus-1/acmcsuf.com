@@ -1,7 +1,7 @@
 name: Create Artwork Showcase Update Request
 description: Here is where you can update a acmCSUF create's artwork showcase information.
 title: '[ARTWORK_AUTOMATION]'
-labels: ['automation:ARTWORK']
+labels: ['automation:artwork']
 
 body:
   - type: markdown
