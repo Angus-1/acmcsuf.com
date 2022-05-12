@@ -33,6 +33,8 @@ export const acmGeneral: AcmPath = {
   color: 'var(--acm-blue)',
 };
 
+
+
 export const acmPaths = [acmAlgo, acmCreate, acmDev, acmGeneral] as const;
 
 /** Pinned paths are featured on the landing page. */
