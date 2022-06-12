@@ -1,7 +1,28 @@
-<script lang="ts">
-  import { acmAlgo, acmCreate, acmDev } from '$lib/constants/acm-paths';
-  import { TextAlignment } from '$lib/constants/text-alignment';
-  import CommonHero from '$lib/components/sections/common-hero.svelte';
-  import PathSection from '$lib/components/paths/path-section.svelte';
-  import Spacing from '$lib/components/sections/spacing.svelte';
+
+<script>
+  export let photos;
 </script>
+
+<h1> Photos </h1>
+
+<div class="grid">
+  {#each photos as photo}
+    <a sveltekit:prefetch href="/photos/{photo.id}">
+      <img src={photo.thumbnailUrl} alt={photo.title}>
+    </a>
+    {/each}
+</div>
+
+<style>
+	.gri {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-gap: 8px;
+	}
+
+	figure, img {
+		width: 100%;
+		margin: 0;
+	}
+</style>
