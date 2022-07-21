@@ -4,35 +4,11 @@
 
 <h1>Photos</h1>
 
-<form method= "post" enctype ="multipart/form-data">
-
-
-
-
-
-</form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<form method="post" enctype="multipart/form-data" />
 
 <div class="grid">
   {#each photos as photo}
-    <a sveltekit:prefetch href="/photos/{photo.id}">
+    <a sveltekit:prefetch href="/paths/create{photo.id}">
       <img src={photo.thumbnailUrl} alt="{photo.title} thumbnail" />
     </a>
   {/each}
@@ -41,8 +17,8 @@
 <style>
   .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0.5em;
+    grid-template-columns: repeat(4, 2fr);
+    grid-gap: 1em;
   }
 
   a,

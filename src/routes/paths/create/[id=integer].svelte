@@ -1,9 +1,9 @@
 <script>
-  export let photo;
+  export let create;
 </script>
 
-<h1>{photo.title}</h1>
-<img src = {photo.url} alt = {photo.title} />
+<h1>{create.title}</h1>
+<img src = {create.url} alt = {create.title} />
  
 
 <style>
