@@ -4,11 +4,9 @@
 
 <h1>Photos</h1>
 
-<form method="post" enctype="multipart/form-data" />
-
 <div class="grid">
   {#each photos as photo}
-    <a sveltekit:prefetch href="/paths/create{photo.id}">
+    <a sveltekit:prefetch href="/paths/create/{photo.id}">
       <img src={photo.thumbnailUrl} alt="{photo.title} thumbnail" />
     </a>
   {/each}
