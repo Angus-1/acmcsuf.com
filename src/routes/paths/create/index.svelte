@@ -1,5 +1,5 @@
 <script>
-  export let photos;
+  import photos from './artwork';
 </script>
 
 <h1>Photos</h1>
@@ -7,7 +7,7 @@
 <div class="grid">
   {#each photos as photo}
     <a sveltekit:prefetch href="/paths/create/{photo.id}">
-      <img src={photo.thumbnailUrl} alt="{photo.title} thumbnail" />
+      <img src={photo.src} alt="{photo.title} thumbnail" />
     </a>
   {/each}
 </div>
