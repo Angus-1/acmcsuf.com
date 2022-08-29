@@ -7,13 +7,14 @@
 <div class="grid">
   {#each photos as photo}
     <a sveltekit:prefetch href="/paths/create/{photo.id}">
-      <img src={photo.src} alt="{photo.title} thumbnail" />
+      <img src={photo.src} alt="{photo.title}" />
     </a>
   {/each}
 </div>
 
 <style>
   .grid {
+    padding-top:5rem;
     display: grid;
     grid-template-columns: repeat(4, 2fr);
     grid-gap: 1em;
