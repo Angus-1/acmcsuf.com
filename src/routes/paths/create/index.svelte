@@ -7,7 +7,7 @@
 <div class="grid">
   {#each photos as photo}
     <a sveltekit:prefetch href="/paths/create/{photo.id}">
-      <img src={photo.src} alt="{photo.title}" />
+      <img src=/assets/artwork/{photo.src} alt="{photo.title}" />
     </a>
   {/each}
 </div>
